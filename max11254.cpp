@@ -248,7 +248,7 @@ void MAX11254::IRQ_handler()
     #endif
 
     // read measurement
-    uint32_t measurements[MAX11254_NUM_CHANNELS];
+    int32_t measurements[MAX11254_NUM_CHANNELS];
     for (size_t i = 0; i < MAX11254_NUM_CHANNELS; i++)
     {
         measurements[i] = this->readMeasurement(i);

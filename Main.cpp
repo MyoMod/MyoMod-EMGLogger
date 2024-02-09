@@ -23,19 +23,29 @@
 
 #define ADC_CLK_PIN 10
 #define ADC_MOSI_PIN 11
-#define ADC_MISO_PIN 12
-#define ADC_CS_PIN 13
-#define ADC_RDYB_PIN 2
-#define ADC_RESET_PIN 5
+#define ADC_MISO_PIN 8
+#define ADC_CS_PIN 9
+#define ADC_RDYB_PIN 6
+#define ADC_RESET_PIN 7
 
 #define POWER_SAVING_PIN 23
 
 #define USE_ONBOARD_ADC 0
 
+#define LED_R_PIN 22
+#define LED_G_PIN 21
+#define LED_B_PIN 20
 
+#define JUMPER1_PIN 3
+#define JUMPER2_PIN 2
+#define JUMPER3_PIN 5
+#define JUMPER4_PIN 4
+#define JUMPER5_PIN 28
+#define JUMPER6_PIN 26
+#define JUMPER7_PIN 27
 
 //variables
-static uint16_t sampleRate = 16'000; //Hz
+static uint16_t sampleRate = 12'000; //Hz
 
 static MAX11254 *g_adc;
 
