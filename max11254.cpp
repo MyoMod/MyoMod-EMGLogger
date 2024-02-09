@@ -241,7 +241,9 @@ void MAX11254::IRQ_handler()
     MAX11254_STAT stat_reg;
     #ifndef MAX11254_SIMULATED
     max11254_hal_read_reg(MAX11254_STAT_OFFSET, &stat_reg);
-    bool error = stat_reg.ERROR || stat_reg.GPOERR || stat_reg.ORDERR || stat_reg.SCANERR || !stat_reg.REFDET;
+    //TODO: Maybe chack !stat_reg.REFDET, but it is only valid during conversion and may be therefore
+    // wrongly detected as an error
+    bool error = stat_reg.ERROR || stat_reg.GPOERR || stat_reg.ORDERR || stat_reg.SCANERR;
 
     #else
     bool error = false;
